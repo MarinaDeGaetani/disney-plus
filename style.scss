@@ -15,11 +15,11 @@ body {
   line-height: 26px;
   letter-spacing: 2px;
 }
+
 h1,
 h2,
 h3 {
   color: var(--white);
-  margin-bottom: 16px;
 }
 
 h1 {
@@ -27,16 +27,16 @@ h1 {
   font-size: 44px;
   margin-right: 20px;
   margin-bottom: 24px;
-  -webkit-margin-after: 30px;
   margin-block-end: 30px;
   line-height: 1.2;
 }
 
 h2 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 400px;
-  line-height: 38px;
-  color: var(--white);
+  line-height: 30px;
+  margin-bottom: 20px;
+  color: #f9f9f9;
 }
 
 h3 {
@@ -47,11 +47,7 @@ h3 {
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 34px;
 }
@@ -60,7 +56,6 @@ nav > .logo-nav {
   width: 110px;
   margin-right: auto;
 }
-
 .btn {
   padding: 16px 24px;
   color: var(--white);
@@ -69,12 +64,10 @@ nav > .logo-nav {
   border: solid 1px;
   margin: 5px;
 }
-
 .signup {
   background-color: var(--primary-color);
   border-color: var(--primary-color);
 }
-
 .signin {
   border-color: var(--white);
 }
@@ -83,27 +76,23 @@ header > div {
   max-width: 740px;
   padding: 60px;
 }
+
 .relabs {
   position: relative;
 }
-
 .relabs > div {
   position: absolute;
   top: -5%;
   left: 20px;
 }
-
 .relabs > img {
   height: 100vh;
-  -o-object-fit: cover;
   object-fit: cover;
 }
 
 .grid-list {
   width: 624px;
   height: 186.8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding-left: 0;
   margin: 0 -12px;
@@ -111,7 +100,6 @@ header > div {
 
 .subscription {
   max-width: 600px;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 10vw 5vw;
 }
@@ -124,29 +112,19 @@ header > div {
 }
 
 .two-column > .grid-item {
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
   max-width: 50%;
 }
 
 .grid-item {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   list-style: none;
   padding: 12px;
 }
 
 .both-ends {
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -163,7 +141,6 @@ p.small {
   max-width: 360px;
   height: 60px;
   border: none;
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   vertical-align: middle;
   text-align: center;
@@ -197,28 +174,25 @@ a span {
   text-align: center;
   width: 240px;
 }
-
 section {
   position: relative;
   box-sizing: border-box;
-  background-position: 50%;
   padding: 10vw 5vw;
+  background-position: 50%;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-section .sidealign {
+section > .sidealign {
   display: flex;
   align-items: center;
-  flex-direction: row;
 }
-
-.lazy-loaded {
-  width: 100%;
-  height: auto;
+img .lasy-loaded {
   display: block;
+  width: 50%;
+  height: auto;
+  aspect-ratio: auto 1200 / 960;
 }
-
 .text-container {
   box-sizing: border-box;
   padding: 0 2vw;
@@ -251,24 +225,33 @@ ul {
   padding-inline-start: 40px;
 }
 
+section > .center {
+  background-position-x: 50%;
+  background-position-y: 50%;
+  text-align: center;
+  padding: 10vw 5vw;
+}
+
 @media (max-width: 766px) {
   h1 {
     font-size: 20px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
     align-items: center;
     text-align: center;
-    content: " ";
   }
   h3 {
     margin-bottom: 4px;
   }
+  .logo-header {
+    max-width: 130px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn {
+  }
   nav {
     padding: 0 12px 0 20px;
   }
-  div .text-center .mobile-one-column {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+  div .text-center {
     align-items: center;
     text-align: center;
   }
@@ -278,16 +261,20 @@ ul {
   .mobile-one-column {
     max-width: 320px;
     margin: 0 auto;
+    align-items: center;
+    text-align: center;
   }
   .grid items {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 2px solid hsla(0, 0%, 100%, 0.2);
+  }
+  picture {
+    margin-left: auto;
+    margin-right: auto;
   }
   p.small {
     margin-bottom: 8px;

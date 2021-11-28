@@ -1,4 +1,3 @@
 pour tp disney + :
-faire en sorte que les liens ouvre une autre page
-espace entre bouton et liens 
-image a bien mettre 
+finir page
+faire le responsive
