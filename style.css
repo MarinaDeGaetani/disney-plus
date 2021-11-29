@@ -78,7 +78,11 @@ nav > .logo-nav {
 .signin {
   border-color: var(--white);
 }
-
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 header > div {
   max-width: 740px;
   padding: 60px;
@@ -100,12 +104,10 @@ header > div {
 }
 
 .grid-list {
-  width: 624px;
-  height: 186.8px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  flex-wrap: wrap;
   padding-left: 0;
+  justify-content: space-around;
   margin: 0 -12px;
 }
 
@@ -131,14 +133,8 @@ header > div {
 }
 
 .grid-item {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
   flex-direction: column;
   list-style: none;
   padding: 12px;
@@ -197,33 +193,27 @@ a span {
   text-align: center;
   width: 240px;
 }
-
+.center {
+  text-align: center;
+}
 section {
   position: relative;
-  box-sizing: border-box;
+  box-sizing: content-box;
   background-position: 50%;
   padding: 10vw 5vw;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
-section .sidealign {
+.sidealign {
   display: flex;
   align-items: center;
-  flex-direction: row;
 }
 
-.lazy-loaded {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.text-container {
+.sidealign .text-container {
   box-sizing: border-box;
   padding: 0 2vw;
 }
-
 ::marker {
   unicode-bidi: isolate;
   font-variant-numeric: tabular-nums;
@@ -251,6 +241,85 @@ ul {
   padding-inline-start: 40px;
 }
 
+a.primary {
+  color: #f9f9f9;
+  background: #0063e5;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  box-sizing: border-box;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease 0s;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 16.5px 24px;
+}
+
+.grid-item:last-child {
+  margin-bottom: 0;
+}
+.grid-item.center {
+  align-items: center;
+}
+.four-column .grid-item {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+footer {
+  position: relative;
+  box-sizing: border-box;
+  text-align: center;
+  background-position: 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logo-footer {
+  width: 80px;
+  margin-left: 50%;
+}
+
+#language-selector {
+  padding: 0 26px;
+  margin: 8px auto;
+  z-index: 1;
+  border: none;
+  display: inline-block;
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-appearance: none;
+  color: #f9f9f9;
+  text-align: center;
+  text-align-last: center;
+}
+
+footer a.link.small,
+footer button.link.small {
+  color: silver;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 0;
+  white-space: nowrap;
+}
+a .link {
+  cursor: pointer;
+  background: 0 0;
+  border: none;
+  text-align: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.globe {
+  width: 18px;
+}
 @media (max-width: 766px) {
   h1 {
     font-size: 20px;
